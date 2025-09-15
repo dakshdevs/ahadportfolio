@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelly Portfolio</title>
+  <link rel="stylesheet" href="home.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <!-- Toggler Left (only on mobile) -->
+      <div class="toggler" id="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!-- Logo Center -->
+      <div class="logo">KELLY</div>
+
+      <!-- Navbar Links (desktop + toggle mobile) -->
+      <ul class="nav-links" id="menu">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Social Icons Right -->
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section Split -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Kelly Adams</h1>
+      <p>I'm a professional illustrator from San Francisco</p>
+      <a href="#" class="btn">ABOUT ME</a>
+    </div>
+    <div class="hero-image">
+      <img src="image/ChatGPT Image Sep 15, 2025, 10_43_40 PM.png" alt="Kelly Illustration">
+    </div>
+  </section>
+
+  <!-- JS for Toggle -->
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
+
+</body>
+</html>
