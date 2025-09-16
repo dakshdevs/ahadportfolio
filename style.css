@@ -13,12 +13,18 @@
       animation: fadeIn 1.2s ease forwards;
     }
 
+    html{
+       scroll-behavior: smooth;  
+       scroll-padding-top: 80px; 
+    }
+
+
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
 
-    /* Overlay fade (optional visual effect) */
+   
     body::after {
       content: "";
       position: fixed;
@@ -32,13 +38,13 @@
       to { opacity: 0; }
     }
 
-    /* Lock scroll when sidebar open */
+    
     body.lock-scroll {
       height: 100vh;
       overflow: hidden;
     }
 
-    /* Animations */
+   
     @keyframes slideDown {
       from { transform: translateY(-100%); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
@@ -58,6 +64,9 @@
       from { transform: translateY(40px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
     }
+
+
+    /* navbar start */
 
     header {
       width: 100%;
@@ -144,7 +153,7 @@
       background: #e6321e;
     }
 
-    /* Hamburger menu */
+
     .menu-toggle {
       display: none;
       flex-direction: column;
@@ -160,7 +169,7 @@
       transition: 0.3s;
     }
 
-    /* Sidebar fix */
+
     .sidebar {
       position: fixed;
       top: 0;
@@ -245,7 +254,16 @@
       margin-top: auto;
     }
 
-    /* Hero Section */
+    /* navbar end */
+
+
+
+
+
+    /* Hero Section start*/
+
+
+    
     .hero {
       display: flex;
       justify-content: space-between;
@@ -338,7 +356,6 @@
 
     
 
-    /* Responsive */
     @media (max-width: 768px) {
       nav { display: none; }
       .menu-toggle { display: flex; }
@@ -359,10 +376,12 @@
     }
 
 
+    /* hero section end */
 
 
 
-    /* about me  */
+
+    /* about me start */
 
 
 
@@ -488,7 +507,7 @@
   color: #bbb;
 }
 
-/* Buttons */
+
 .aboutme-buttons {
   margin-top: 20px;
   display: flex;
@@ -525,7 +544,7 @@
   color: #fa2916;
 }
 
-/* Responsive Fixes */
+
 @media (max-width: 1024px) {
   .aboutme-section {
     padding: 40px 20px;
@@ -592,7 +611,14 @@
 }
 
 
-/* my skills section */
+/* about me section end */
+
+
+
+
+
+
+/* my skills section start*/
 
 .myskills-section {
       max-width: 800px;
@@ -651,7 +677,7 @@
       transition: width 1.5s ease-in-out;
     }
 
-    /* Fade + Slide Animation */
+  
     .fade-up {
       opacity: 0;
       transform: translateY(30px);
@@ -663,7 +689,6 @@
       transform: translateY(0);
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       .myskills-section {
         width: 90%;
@@ -697,7 +722,13 @@
     }
 
 
-    /* my project section */
+    /* my skills section end */
+
+
+
+
+
+    /* my project section start*/
 
 
     
@@ -724,7 +755,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* ✅ Grid Layout */
+
 .myproj-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -733,7 +764,7 @@
   margin: auto;
 }
 
-/* 🔥 Project Card Style */
+
 .myproj-card {
   border-radius: 20px;
   font-family: 'Poppins', sans-serif;
@@ -752,7 +783,7 @@
   transition: all 0.8s ease;
 }
 
-/* ✅ Image Styling */
+
 .myproj-image {
   display: flex;
   justify-content: center;
@@ -806,14 +837,14 @@
   border-bottom: 2px solid #ff2612;
 }
 
-/* ✅ Desktop Layout */
+
 @media (min-width: 901px) {
   .myproj-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* ✅ Responsive Tweaks for Smaller Screens */
+
 @media (max-width: 600px) {
   .myproj-section {
     padding: 40px 15px;
@@ -832,7 +863,7 @@
     font-size: 0.9rem;
   }
 
-  /* ✅ Image fix */
+  
   .myproj-image img {
     height: auto;
     width: 100%;
@@ -840,20 +871,20 @@
   }
 }
 
+/* my project section end */
+
 
 
 
 /* contact me section start */
 
 
-
-/* Autofill hone par background aur text color control karna */
 .custom-form-container input:-webkit-autofill,
 .custom-form-container textarea:-webkit-autofill {
-    background-color: #000000 !important; /* Black background */
-    -webkit-text-fill-color: white !important; /* White text */
-    -webkit-box-shadow: 0 0 0px 1000px #000000 inset !important; /* Force background color */
-    transition: background-color 5000s ease-in-out 0s; /* Background color retain karne ke liye */
+    background-color: #000000 !important; 
+    -webkit-text-fill-color: white !important; 
+    -webkit-box-shadow: 0 0 0px 1000px #000000 inset !important; 
+    transition: background-color 5000s ease-in-out 0s; 
 }
 
 
@@ -903,7 +934,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 100px; /* har item ke beech gap */
+    gap: 100px; 
     margin-top: 40px;
 
 
@@ -914,7 +945,7 @@
 
 .custom-contact-info p {
     display: flex;
-    flex-direction: column; /* ek ke neeche ek */
+    flex-direction: column; 
     align-items: center;
     text-align: center;
     gap: 12px;
@@ -989,7 +1020,6 @@
 
 
 
-/* Row for Name + Email */
 .form-row {
     display: flex;
     gap: 15px;
@@ -997,14 +1027,14 @@
 }
 
 .form-row .form-group {
-    flex: 1; /* equal width (50% + 50%) */
+    flex: 1; 
 }
 
 .form-row .form-group input {
     width: 100%;
 }
 
-/* Subject aur Message full width rahenge */
+
 #subject, 
 #message {
     width: 100%;
@@ -1014,7 +1044,7 @@
 
 
 
-/* --- Scroll Animation --- */
+
 .animate {
   opacity: 0;
   transform: translateY(50px);
@@ -1035,7 +1065,7 @@
   }
 }
 
-/* --- Extra Staggered Delay (optional) --- */
+
 .custom-contact-info p:nth-child(1) { animation-delay: 0.2s; }
 .custom-contact-info p:nth-child(2) { animation-delay: 0.4s; }
 .custom-contact-info p:nth-child(3) { animation-delay: 0.6s; }
@@ -1047,7 +1077,7 @@
 
 
 
-/* Responsive Styles */
+
 @media (max-width: 1024px) {
     .custom-contact-section {
         padding: 40px;
@@ -1088,10 +1118,7 @@
         font-size: 16px;
     }
     .custom-contact-info {
-        /* width: 100%;
-        text-align: center;
-        display: flex;
-        justify-content: center; */
+      
         flex-direction: column;
         align-items: center;
         gap: 25px;
@@ -1117,7 +1144,7 @@
 }
 @media (max-width: 600px) {
   .form-row {
-    flex-direction: column; /* side by side ki jagah neeche neeche */
+    flex-direction: column; 
     gap: 0;
   }
 }
@@ -1151,11 +1178,12 @@
 }
 
 
+/* contact section end */
 
 
 
 
-/* footer */
+/* footer start*/
 
 
 
@@ -1207,20 +1235,20 @@ footer {
     color: white;
     font-size: 18px;
     font-family: 'Raleway', sans-serif; 
-    border-top: 1px solid rgb(114, 114, 114); /* ✅ Sirf upar border chahiye */
+    border-top: 1px solid rgb(114, 114, 114); 
     width: 100%;
     align-items: center;
     height: 47px;
     margin-top: 30px;
     text-align: center;
-    padding: 10px 0; /* ✅ Footer ke andar padding add karne ke liye */
+    padding: 10px 0; 
 }
 
 
 
 
 
-/* 📱 Tablets ke liye (768px tak) */
+
 @media (max-width: 768px) {
     .social-iconsds {
         gap: 20px;
@@ -1247,7 +1275,7 @@ footer {
     }
 }
 
-/* 📱 Mobiles ke liye (480px tak) */
+
 @media (max-width: 480px) {
     .social-iconsds {
         gap: 25px;
@@ -1273,3 +1301,5 @@ footer {
 }
 
 
+
+/* footer end */

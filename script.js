@@ -29,7 +29,7 @@ const toggle = document.getElementById('menu-toggle');
     });
 
  
-    const texts = ["Creative Photography", "Creative Web Design", "Creative Web Development"];
+    const texts = ["I'm a Web Developer", "I'm a Web Designer", "Backened Developer"];
     let count = 0;
     let index = 0;
     let currentText = "";
